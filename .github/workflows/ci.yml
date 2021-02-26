@@ -39,7 +39,7 @@ jobs:
           if [ "${{ matrix.allocator }}" == memkind ]; then
             MEMKIND_DAX_KMEM_NODES=0 ./runtest --durable --pmem-ratio --clients 1
           fi
-          ./runtest --clients 1
+          ./runtest --durable --clients 1
           
     # - name: Upload coverage to Codecov
     #   uses: codecov/codecov-action@v1
